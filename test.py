@@ -2,7 +2,7 @@ import unittest
 import requests
 
 
-class test(unittest.TestCase): 
+class test(unittest.Test): 
      def test_connection(self):
         response = requests.get('http://localhost:5000/api/products')
         if response.status_code == 200:
