@@ -60,13 +60,13 @@ def api_each_prod(prod_id):
     elif request.method == "PUT":
         product_obj = Product.objects(prod_id=prod_id).first()
         product_obj.update(prod_id=1,Title="Adidas",Color="Black",Price="156")
-        return make_response("Produit modifier",200)
+        return make_response("Produit modifier",500)
 
 
     elif request.method == "DELETE":
         product_obj = Product.objects(prod_id=prod_id).first()
         product_obj.delete()
-        return make_response("Produit supprimé",200)
+        return make_response("Produit supprimé",500)
      
 if __name__ == '__main__':
     app.run()

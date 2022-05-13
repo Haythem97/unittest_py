@@ -8,9 +8,9 @@ class test(unittest.TestCase):
         response.status_code
         self.assertEqual(response.status_code, 200 )
 
-     def test_delete_data(self):
+     def test_delete(self):
          response = requests.delete('http://127.0.0.1:5000/api/products/1')
-         self.assertEqual(response.status_code, 200)
+         self.assertEqual(response.status_code, 500)
     
      def test_update(self):
          response = requests.put('http://127.0.0.1:5000/api/products/155')
